@@ -1,0 +1,15 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Cassie Chew
+	email = me@cassie.id
+	signingkey = 3067DD862446ACE1
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
+[credential]
+	helper = osxkeychain
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
