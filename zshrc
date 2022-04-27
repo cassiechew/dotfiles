@@ -77,7 +77,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  zsh-autosuggestions
+  web-search
+  history
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -130,3 +135,5 @@ alias rails=/opt/homebrew/lib/ruby/gems/3.1.0/bin/rails
 eval $(thefuck --alias)
 
 alias vim=nvim
+. ~/z.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
