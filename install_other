@@ -50,6 +50,10 @@ brew install exa
 brew install gnupg
 brew install pinentry-mac
 brew install neovim
+mkdir -p ~/.local/share/nvim/site
+ln -s ~/.local/share/nvim/site ~/.vim
+ln -s .config/nvim/init.vim .vimrc
+
 brew install tldr
 brew install diff-so-fancy
 brew install ctop
