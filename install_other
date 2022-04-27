@@ -23,7 +23,12 @@ asdf global nodejs latest
 
 npm i -g yarn
 
-brew install php
+brew install gmp libsodium imagemagick
+asdf plugin-add php https://github.com/asdf-community/asdf-php.git
+
+composer global require friendsofphp/php-cs-fixer
+asdf reshim
+php-cs-fixer --version
 
 # Apps
 brew install --cask visual-studio-code
