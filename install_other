@@ -29,6 +29,7 @@ asdf install dotnet-core 3.1
 
 brew install gmp libsodium imagemagick
 asdf plugin-add php https://github.com/asdf-community/asdf-php.git
+asdf install php latest
 
 composer global require friendsofphp/php-cs-fixer
 asdf reshim
