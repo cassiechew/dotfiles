@@ -115,11 +115,9 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#source $(dirname $(gem which colorls))/tab_complete.sh
-# alias lc='colorls -lA --sd'
+# source $(dirname $(gem which colorls))/tab_complete.sh
 alias a="arch -x86_64"
 alias ibrew="arch -x86_64 brew"
-#alias ls="ls -la"
 alias ls="exa -la --icons"
 #export PATH="/usr/local/bin/ruby:$PATH"
 export GPG_TTY=$(tty)
@@ -137,3 +135,7 @@ eval $(thefuck --alias)
 alias vim=nvim
 . ~/z.sh
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+alias top="vtop"
+alias oldtop="/usr/bin/top"
+

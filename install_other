@@ -23,6 +23,10 @@ asdf global nodejs latest
 
 npm i -g yarn
 
+asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
+echo ". ~/.asdf/plugins/dotnet-core/set-dotnet-home.zsh" >> ~/.zshrc
+asdf install dotnet-core 3.1
+
 brew install gmp libsodium imagemagick
 asdf plugin-add php https://github.com/asdf-community/asdf-php.git
 
@@ -47,6 +51,11 @@ brew install pinentry-mac
 brew install neovim
 brew install tldr
 brew install diff-so-fancy
+brew install ctop
+
+sudo npm install -g vtop
+alias 'top="vtop"' >> ~/.zshrc
+echo 'alias oldtop="/usr/bin/top"' >> ~/.zshrc
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
@@ -57,6 +66,12 @@ wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh
 # echo 'alias vim="neovim"' >> ~/.zshrc
 
 source ~/.zshrc
+
+# Cloud things
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "~/Downloads/AWSCLIV2.pkg"
+sudo installer -pkg ~/Downloads/AWSCLIV2.pkg -target /
+which aws
+aws --version
 
 echo "Remember to set up ssh and gpg"
 
