@@ -16,6 +16,9 @@ source ~/.zshrc
 brew install gpg gawk
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf install nodejs latest
+asdf install nodejs 6.9.1
+asdf install nodejs 14
+asdf install nodejs 14.17.0
 asdf global nodejs latest
 
 npm i -g yarn
@@ -28,6 +31,7 @@ brew cask install docker
 brew install --cask google-chrome
 brew install --cask rectangle
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+brew install --cask sourcetree
 
 # Terminal things
 brew install thefuck
