@@ -60,8 +60,8 @@ brew install diff-so-fancy
 brew install ctop
 
 sudo npm install -g vtop
-alias 'top="vtop"' >> ~/.zshrc
-echo 'alias oldtop="/usr/bin/top"' >> ~/.zshrc
+#alias 'top="vtop"' >> ~/.zshrc
+#echo 'alias oldtop="/usr/bin/top"' >> ~/.zshrc
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
@@ -70,6 +70,8 @@ wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh
 # echo 'eval $(thefuck --alias)' >> ~/.zshrc
 # echo 'alias ls="exa -la --icons"' >> ~/.zshrc
 # echo 'alias vim="neovim"' >> ~/.zshrc
+
+npm install --global trash-cli
 
 source ~/.zshrc
 

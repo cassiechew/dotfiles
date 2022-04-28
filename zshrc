@@ -139,3 +139,4 @@ alias vim=nvim
 alias top="vtop"
 alias oldtop="/usr/bin/top"
 
+alias rm=trash
