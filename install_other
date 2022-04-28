@@ -46,6 +46,7 @@ brew install --cask sourcetree
 # Terminal things
 brew install thefuck
 brew install navi
+brew install mas
 brew install exa
 brew install gnupg
 brew install pinentry-mac
