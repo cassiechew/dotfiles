@@ -23,7 +23,7 @@
 	new = green bold
 	whitespace = red reverse
 [gpg]
-	program = gpg
+	program = gpg2
 [commit]
 	gpgsign = true
 [credential]

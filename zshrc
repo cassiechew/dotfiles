@@ -133,10 +133,25 @@ alias rails=/opt/homebrew/lib/ruby/gems/3.1.0/bin/rails
 eval $(thefuck --alias)
 
 alias vim=nvim
-. ~/z.sh
+#. ~/z.sh
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 alias top="vtop"
 alias oldtop="/usr/bin/top"
 
 alias rm=trash
+eval "$(zoxide init zsh)"
+
+
+export PNPM_HOME="/Users/cassiechew/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+# bun completions
+[ -s "/Users/cassiechew/.bun/_bun" ] && source "/Users/cassiechew/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/Users/cassiechew/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
