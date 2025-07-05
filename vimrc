@@ -27,8 +27,8 @@ set numberwidth=5
 
 """"""""""""" PLUGINS
 
-call plug#begin('/Users/cassiechew/.vim/plugged')
-  Plug 'preservim/nerdtree'
-  Plug 'itchyny/lightline.vim'
-  Plug 'vim-syntastic/syntastic'
-call plug#end()
+"call plug#begin('/Users/cassiechew/.vim/plugged')
+"  Plug 'preservim/nerdtree'
+"  Plug 'itchyny/lightline.vim'
+"  Plug 'vim-syntastic/syntastic'
+"call plug#end()

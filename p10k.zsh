@@ -37,6 +37,7 @@
     vcs                     # git status
     # =========================[ Line #2 ]=========================
     newline                 # \n
+    hermit
     prompt_char             # prompt symbol
   )
 
@@ -1535,6 +1536,12 @@
     # instant_prompt_example. This will give us the same `example` prompt segment in the instant
     # and regular prompts.
     prompt_example
+  }
+
+  function prompt_hermit() {
+    if [[ -n $HERMIT_ENV ]]; then
+      p10k segment -t "${${HERMIT_ENV:t}//\%/%%} 🐚"  -f blue
+    fi
   }
 
   # User-defined prompt segments can be customized the same way as built-in segments.
