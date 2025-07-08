@@ -133,7 +133,9 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 alias rails=/opt/homebrew/lib/ruby/gems/3.1.0/bin/rails
 eval $(thefuck --alias)
 
+alias v=nvim
 alias vim=nvim
+alias k=kubectl
 #. ~/z.sh
 
 alias top="vtop"
@@ -172,3 +174,6 @@ sudo nvram boot-args=-arm64e_preview_abi
 sudo yabai --load-sa
 
 export KUBECONFIG=/Users/cassiechew/.kube/config:/Users/cassiechew/.kube/homelab-config
+
+# To customize prompt, run `p10k configure` or edit ~/.dotfiles/p10k.zsh.
+[[ ! -f ~/.dotfiles/p10k.zsh ]] || source ~/.dotfiles/p10k.zsh

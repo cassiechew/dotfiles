@@ -1,0 +1,2 @@
+require("cassie")
+print("hello")
