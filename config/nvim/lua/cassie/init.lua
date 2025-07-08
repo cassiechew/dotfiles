@@ -1,2 +1,4 @@
+-- require("cassie.set")
 require("cassie.remap")
-print("hello from cassie")
+require("cassie.lazy_init")
+

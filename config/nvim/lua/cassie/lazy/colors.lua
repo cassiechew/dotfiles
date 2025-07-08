@@ -8,3 +8,14 @@ function ColorMyPencils(color)
 end
 
 ColorMyPencils()
+
+return {
+
+	{
+		"catppuccin/nvim",
+		name = "catppuccin"
+		config = function()
+			ColorMyPencils()
+		end
+	},
+}
