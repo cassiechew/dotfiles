@@ -2,6 +2,9 @@
 
 # Preq
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 
 brew install wget
 
@@ -9,77 +12,32 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 sed -i 's/robbyrussell/powerlevel10k\/powerlevel10k/g' ~/.zshrc
 
-brew install asdf
-echo '. $HOME/.asdf/asdf.sh' >> ~/.zshrc
 source ~/.zshrc
 
 brew install gpg gawk
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf install nodejs latest
-asdf install nodejs 6.9.1
-asdf install nodejs 14
-asdf install nodejs 14.17.0
-asdf global nodejs latest
-
-npm i -g yarn
-
-asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
-echo ". ~/.asdf/plugins/dotnet-core/set-dotnet-home.zsh" >> ~/.zshrc
-asdf install dotnet-core 3.1
-
-brew install gmp libsodium imagemagick
-asdf plugin-add php https://github.com/asdf-community/asdf-php.git
-asdf install php latest
-
-composer global require friendsofphp/php-cs-fixer
-asdf reshim
-php-cs-fixer --version
 
 # Apps
 brew install --cask visual-studio-code
-brew cask install docker
+brew install --cask docker
 brew install --cask google-chrome
 brew install --cask rectangle
-curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-brew install --cask sourcetree
+brew install --cask ghostty
+
+# tiling
+brew install koekeishiya/formulae/yabai
+brew install koekeishiya/formulae/skhd
 
 # Terminal things
-brew install thefuck
-brew install navi
-brew install mas
-brew install exa
-brew install gnupg
-brew install pinentry-mac
-brew install neovim
-mkdir -p ~/.local/share/nvim/site
-ln -s ~/.local/share/nvim/site ~/.vim
-ln -s .config/nvim/init.vim .vimrc
+brew install thefuck navi mas eza gnupg pinentry-mac neovim tmux
 
 brew install tldr
 brew install diff-so-fancy
 brew install ctop
 
-sudo npm install -g vtop
-#alias 'top="vtop"' >> ~/.zshrc
-#echo 'alias oldtop="/usr/bin/top"' >> ~/.zshrc
-
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh
-
-# echo 'eval $(thefuck --alias)' >> ~/.zshrc
-# echo 'alias ls="exa -la --icons"' >> ~/.zshrc
-# echo 'alias vim="neovim"' >> ~/.zshrc
-
-npm install --global trash-cli
 
 source ~/.zshrc
 
 # Cloud things
-curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "~/Downloads/AWSCLIV2.pkg"
-sudo installer -pkg ~/Downloads/AWSCLIV2.pkg -target /
-which aws
-aws --version
 
 echo "Remember to set up ssh and gpg"
-

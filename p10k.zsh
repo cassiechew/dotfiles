@@ -37,7 +37,8 @@
     vcs                     # git status
     # =========================[ Line #2 ]=========================
     newline                 # \n
-    prompt_char           # prompt symbol
+    hermit
+    #prompt_char           # prompt symbol
   )
 
   # The list of segments shown on the right. Fill it with less important segments.
@@ -101,7 +102,7 @@
     load                  # CPU load
     disk_usage            # disk usage
     ram                   # free RAM
-    swap                  # used swap
+    # swap                  # used swap
     todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
     timewarrior             # timewarrior tracking status (https://timewarrior.net/)
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
@@ -1778,6 +1779,12 @@
   # Type `p10k help segment` for documentation and a more sophisticated example.
   function prompt_example() {
     p10k segment -b 1 -f 3 -i '⭐' -t 'hello, %n'
+  }
+
+  function prompt_hermit() {
+    if [[ -n $HERMIT_ENV ]]; then
+      p10k segment -b 199 -t "${${HERMIT_ENV:t}//\%/%%} 🐚" -f 055
+    fi
   }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
