@@ -1,5 +1,9 @@
 return {
     "gelguy/wilder.nvim",
+		dependencies = {
+			"romgrk/fzy-lua-native",      -- for lua_fzy_filter/highlighter
+			"nixprime/cpsm",              -- for cpsm_filter
+		},
     config = function()
 			local wilder = require('wilder')
 			wilder.setup({modes = {':', '/', '?'}})
