@@ -13,7 +13,7 @@
 
 @REM " Softtabs, 2 spaces
 @REM set tabstop=2
-@REM set shiftwidth=2
+set shiftwidth=4
 @REM set shiftround
 @REM set expandtab
 
@@ -21,8 +21,8 @@
 @REM set list listchars=tab:»·,trail:·,nbsp:·
 
 @REM " Numbers
-@REM set number
-@REM set numberwidth=5
+set number
+set numberwidth=5
 
 
 @REM """"""""""""" PLUGINS
@@ -32,3 +32,4 @@
 @REM "  Plug 'itchyny/lightline.vim'
 @REM "  Plug 'vim-syntastic/syntastic'
 @REM "call plug#end()
+
