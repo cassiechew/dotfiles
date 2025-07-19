@@ -177,3 +177,5 @@ export KUBECONFIG=/Users/cassiechew/.kube/config:/Users/cassiechew/.kube/homelab
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/p10k.zsh.
 [[ ! -f ~/.dotfiles/p10k.zsh ]] || source ~/.dotfiles/p10k.zsh
+
+export PATH="/usr/bin/python3:$PATH"
